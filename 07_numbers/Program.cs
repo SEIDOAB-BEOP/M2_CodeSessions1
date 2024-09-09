@@ -4,6 +4,25 @@ Console.WriteLine("Enter numbers separated by semicolon ex. (1;2;4)");
 string strInput = Console.ReadLine();
 string[] arrInput = strInput.Split(";");
 
+#region Validate the input
+bool bAllOk = true;
+for (int i = 0; i < arrInput.Length; i++)
+{
+    bAllOk = int.TryParse(arrInput[i], out _);
+    if (!bAllOk)
+    {
+        break;
+    }
+}
+
+if (!bAllOk)
+{
+    System.Console.WriteLine("Format error");
+    return;
+}
+#region 
+
+
 int sum = 0;
 int sumOdd = 0;
 int sumEven = 0;
