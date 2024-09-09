@@ -20,7 +20,7 @@ if (!bAllOk)
     System.Console.WriteLine("Format error");
     return;
 }
-#region 
+#endregion 
 
 
 int sum = 0;
